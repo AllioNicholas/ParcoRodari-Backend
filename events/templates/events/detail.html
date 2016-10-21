@@ -1,0 +1,13 @@
+<h1>{{ event.title }}</h1>
+<p>Start date and time: {{ event.start_date }}</p>
+<p>End date and time: {{ event.end_date }}</p>
+<p>Description: {{ event.description }}</p>
+<p>Price: {{ event.price }}</p>
+<p>Reservation required: {{ event.reservation_required }}</p>
+<p>Address: {{ event.address }}</p>
+<p>Phone number: {{ event.phone_number }}</p>
+<p>Website: {{ event.website }}</p>
+<p>Email: {{ event.email }}</p>
+<p>Other: {{ event.other }}</p>
+
+<a href="{% url 'events:edit' event.id %}">Edit</a>
