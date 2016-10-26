@@ -1,0 +1,11 @@
+<h1> add new event</h1>
+
+<div class="panel-body">
+        <form method="post" action"/events/add">
+          {% csrf_token %}
+
+          {{ add_event_form|bootstrap }}
+
+          <input class="btn btn-success " type="submit" value="{{button}}">
+        </form>
+        </div>

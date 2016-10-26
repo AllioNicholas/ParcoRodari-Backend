@@ -27,7 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Login Settings
 
+LOGIN_URL = '/login'
+
+LOGIN_REDIRECT_URL = '/events/'
 # Application definition
 
 INSTALLED_APPS = [

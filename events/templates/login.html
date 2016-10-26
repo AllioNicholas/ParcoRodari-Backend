@@ -1,0 +1,25 @@
+{% if form.errors %}
+<div class="alert alert-danger" role="alert">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+  Your username and password didn't match. Please try again.
+</div>
+{% endif %}
+
+<div class="container">
+  <form class="form-signin" method="post" action="{% url 'events:login' %}">
+    {% csrf_token %}
+    <h2 class="form-signin-heading">Log in</h2>
+    <label for="inputUsername" class="sr-only">Username</label>
+    <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="username" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember_me" name="remember_me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Log in </button>
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+</div>
