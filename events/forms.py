@@ -1,4 +1,5 @@
 from django import forms
+from bootstrap3_datetime.widgets import DateTimePicker
 
 class addEvent(forms.Form):
     title = forms.CharField(
@@ -34,6 +35,6 @@ class addEvent(forms.Form):
     email = forms.EmailField(
         label='Email', max_length=255,
         widget=forms.EmailInput(attrs={'placeholder': 'address@mail.com'}))
-    address = forms.CharField(
+    other = forms.CharField(
         label='Altro', max_length=255,
         widget=forms.TextInput(attrs={'placeholder': 'Atro'}))

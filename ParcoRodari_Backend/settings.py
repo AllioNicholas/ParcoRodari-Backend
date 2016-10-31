@@ -35,6 +35,7 @@ LOGIN_REDIRECT_URL = '/events/'
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap3',
     'events.apps.EventsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -10,7 +10,7 @@ urlpatterns = [
     # ex: /events/
     url(r'^events/$', views.events, name='event_list'),
     # ex: /events/add/
-    url(r'^events/add$', views.add, name='add'),
+    url(r'^events/add/$', views.add, name='add'),
     # ex: /events/<id>/
     url(r'^events/(?P<event_id>[0-9]+)/$', views.detail, name='detail'),
     # ex: /events/<id>/edit/
